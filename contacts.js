@@ -9,12 +9,13 @@ function listContacts() {
     const contactsData = fs.readFileSync(contactsPath, "utf-8");
     const contacts = JSON.parse(contactsData);
 
-    contacts.forEach((contact) => {
-      console.log(`Name: ${contact.name}`);
-      console.log(`Email: ${contact.email}`);
-      console.log(`Phone: ${contact.phone}`);
-      console.log(`Id: ${contact.id}`);
-    });
+    console.log(contacts);
+    // contacts.forEach((contact) => {
+    //   console.log(`Name: ${contact.name}`);
+    //   console.log(`Email: ${contact.email}`);
+    //   console.log(`Phone: ${contact.phone}`);
+    //   console.log(`Id: ${contact.id}`);
+    // });
   } catch (error) {
     console.error("Error reading contacts:", error);
   }
